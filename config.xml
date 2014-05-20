@@ -10,14 +10,14 @@
 
         <preference name="phonegap-version" value="3.1.0" />
 
-        <name>Sample Config.xml</name>
+        <name>M-Learning Bahasa</name>
 
         <description>
-        An example for phonegap build docs. 
+        Mobile Learning Bahasa
         </description>
 
-        <author href="http://yoursite.com" email="you@youremail.com">
-        Your Name
+        <author href="http://yoursite.com" email="nataliamelani2.4@gmail.com">
+        Natalia Melani
         </author>
 
     </widget>
