@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
 
+	<script type="application/javascript" src="js/zoom/iscroll.js"></script>
+	
 <script type="text/javascript">
     $(document).on("pageinit", "#home", function (event) {
         $(document).on('click', '#exit', function (e) {
@@ -25,6 +27,20 @@
 
     });
 </script>
+
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', { zoom:true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+
+</script>
+
 </head>
 	<body background="img/background.jpg">
 	
