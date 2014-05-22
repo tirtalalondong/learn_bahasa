@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="user-scalable=yes">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	
 	<title>M-Learning Bahasa</title>
 
 	<link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.4.2.min.css">
@@ -13,7 +14,7 @@
 	<link rel="stylesheet" href="css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
 
-	<script type="application/javascript" src="js/zoom/iscroll.js"></script>
+	<script type="application/javascript" src="js/iscroll.js"></script>
 	
 <script type="text/javascript">
     $(document).on("pageinit", "#home", function (event) {
@@ -40,6 +41,27 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 document.addEventListener('DOMContentLoaded', loaded, false);
 
 </script>
+
+<style type="text/css" media="all">
+#wrapper {
+	/*position:absolute; z-index:1;*/
+	/*top:45px; bottom:48px; left:0;
+	width:100%;*/
+	/*background:#aaa;*/
+	overflow:auto;
+}
+
+#scroller {
+	position:relative;
+/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+
+	width:640px;
+	padding:0;
+	background:#fff;
+}
+
+</style>
 
 </head>
 	<body background="img/background.jpg">
@@ -97,6 +119,6 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 				<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
 			</div>
 		</div>
-	 </div>
+	</div>
 	</body>
 </html>
