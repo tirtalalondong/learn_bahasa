@@ -4,18 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>M-Learning Bahasa</title>
-	<!--<link rel="shortcut icon" href="favicon.ico">-->
+
 	<link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.4.2.min.css">
 	<link rel="stylesheet" href="css/themes/default/background.css">
 	<script src="js/jquery.js"></script>
-	<script src="js/jquery.mobile-1.4.2.min.js"></script>
-	
+	<script src="js/jquery.mobile-1.4.2.min.js"></script>	
 	<link rel="stylesheet" href="css/themes4/theme_pink.min.css" />
 	<link rel="stylesheet" href="css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
-<!--	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script> -->
-		
+
+<script>
+$(document).bind( "mobileinit", function(event) {
+       $.extend($.mobile.zoom, {locked:false,enabled:true});
+});
+</script>
 </head>
 	<body background="img/background.jpg">
 	
@@ -32,6 +34,7 @@
 						<li><a href="menu_informasi.html" rel="external">Information</a></li>
 						<li><a href="menu_glosarium.html" rel="external">Glosarium</a></li>
 						<li><a href="#help">Help</a></li>
+						<li><a href="#exit">Exit</a></li>
 					</ul>
 				</div>
 				
@@ -50,12 +53,20 @@
 			
 			<div data-role="content" >
 				<h2> Help </h2>
-					<p> Learn Bahasa consist of dialofues, vocabulary and expresion , grammar explanation, culture notes and Quiz.</p>
+					<p> Learn Bahasa consist of dialogues, vocabulary and expresion , grammar explanation, culture notes and Quiz.</p>
 					<p> The materials presented are : </br>
 					<li><i>pronunciation of indonesia sounds</li></br>
 					<li>dialogues</li></br>
 					<li>grammar</li></br>
-					<li>Assignment.</li></p>
+					<li>Quiz.</li></p>
+					</br>
+					<p>Here the tips menu :</p></br>
+					<li><i>Menu lesson : is for  access the materials Indonesian  such as dialogues ,vocab , grammar,culture notes and an exercise </li></br>
+					<li>Quiz is : for take Quiz after learned the lesson </li></br>
+					<li>Menu Information : This menu contains information about Indonesia, such as culture, tourism, people, and others</li></br>
+					<li><i>Glossary: if there is Indonesian words you do not understand, you can search for the meaning of the word in this menu </li></br>
+					
+					
 					
 			</div>
 				
