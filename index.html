@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="user-scalable=yes">
 	<title>M-Learning Bahasa</title>
 
 	<link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.4.2.min.css">
@@ -13,10 +13,17 @@
 	<link rel="stylesheet" href="css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
 
-<script>
-$(document).bind( "mobileinit", function(event) {
-       $.extend($.mobile.zoom, {locked:false,enabled:true});
-});
+<script type="text/javascript">
+    $(document).on("pageinit", "#home", function (event) {
+        $(document).on('click', '#exit', function (e) {
+            if ( $('.ui-page-active').attr('id') == 'home') {
+                navigator.app.exitApp();
+            } else {
+                history.back();             
+            }
+        }, false);             
+
+    });
 </script>
 </head>
 	<body background="img/background.jpg">
