@@ -16,12 +16,28 @@
 	<link rel="stylesheet" href="../css/themes4/theme_pink.min.css" />
 	<link rel="stylesheet" href="../css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<script type="application/javascript" src="../js/iscroll.js"></script>
+	
+	<!-- Puci Zoom -->
+	<script type="text/javascript">
+
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper', { zoom:true });
+		}
+
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+		document.addEventListener('DOMContentLoaded', loaded, false);
+
+	</script>
+	<!-- End Puci -->
 	
 <script language="JavaScript">
 <!--
 
 var numQues = 5;
-var numChoi = 3;
+
 
 var answers = new Array(5);
 answers[0] = "Tongkonan";
@@ -32,19 +48,10 @@ answers[4] = "Dayak";
 
 function getScore(form) {
   var score = 0;
-  var currElt;
-  var currSelection;
 
   for (i=0; i<numQues; i++) {
-    currElt = i*numChoi;
-    for (j=0; j<numChoi; j++) {
-      currSelection = form.elements[currElt + j];
-      if (currSelection.checked) {
-        if (currSelection.value == answers[i]) {
-          score++;
-          break;
-        }
-      }
+    if (form.elements[i].value == answers[i]) {
+      score++;
     }
   }
 
@@ -58,8 +65,6 @@ function getScore(form) {
   form.solutions.value = correctAnswers;
 
 }
-
-// -->
 </script>
 	
 </head>
@@ -67,7 +72,7 @@ function getScore(form) {
 	
 	
 	<div id="kuis6" data-role="page" data-position="fixed" data-theme="a">
-			
+	<div id="wrapper">	
 		<div data-role="header">
 			<a rel="external" data-rel="Back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-back" onClick="myBack();">Back</a>
 			
@@ -90,7 +95,7 @@ function getScore(form) {
 				<ul data-role="listview" data-inset="true" style="min-width:210px;">
 					<li data-role="list-divider">Choose an action</li>
 					<li><a rel="external" onclick="home()">Home</a></li>
-					<li><a rel="external" onClick="myLesson();">Lesson 3</a></li>
+					<li><a rel="external" onClick="myLesson();">Lesson 6</a></li>
 				</ul>
 			</div>
 			
@@ -119,9 +124,10 @@ function getScore(form) {
 			}
 			</script>
 		</div>
+	
 		
 		<p style="color:red" > The quiz is take 15 minutes ,if you run out of time you will be redirected to home page, you may see the remains time bellow.</p>
-	<span id="countdown" class="timer"></span>
+		<span id="countdown" class="timer"></span>
 		<script type="text/javascript">
 
 
@@ -159,7 +165,7 @@ function getScore(form) {
 			Tanya :Apa nama rumah adat dari Jawa</br>
 			Jawab : <b>Joglo </b></br>
 			
-			
+	</div>	
 					<form name="quiz">
 							1. Apa nama rumah adat dari Sulawesi Selatan?<br>
 							<input type="text" name="q1" size=15 value="">
@@ -187,11 +193,12 @@ function getScore(form) {
 							<!--Correct answers:<br>
 							<textarea name="solutions" wrap="virtual" rows="4" cols="40"></textarea> -->
 							</form>
-	</div>  
-
-	<div data-role="footer" data-position="fixed">
-        	<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
-        </div>
+			</div>  
+		<div id="wrapper">	
+			<div data-role="footer" data-position="fixed">
+				<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
+			</div>
 	
+		</div>
 	</body>
 </html>

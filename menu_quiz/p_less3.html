@@ -15,6 +15,22 @@
 	<link rel="stylesheet" href="css/themes4/theme_pink.min.css" />
 	<link rel="stylesheet" href="css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<script type="application/javascript" src="../js/iscroll.js"></script>
+	
+	<!-- Puci Zoom -->
+	<script type="text/javascript">
+
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper', { zoom:true });
+		}
+
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+		document.addEventListener('DOMContentLoaded', loaded, false);
+
+	</script>
+	<!-- End Puci -->
 	
 <script language="JavaScript">
 <!--
@@ -64,8 +80,8 @@ function getScore(form) {
 </head>
 	<body>
 	
-	
-	<div id="pemahaman1" data-role="page" data-position="fixed" data-theme="a">
+	<div id="wrapper">
+	<div id="pemahaman3" data-role="page" data-position="fixed" data-theme="a">
 			
 		<div data-role="header">
 			<a rel="external" data-rel="Back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-back" onClick="myBack();">Back</a>

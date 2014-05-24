@@ -15,55 +15,71 @@
 	<link rel="stylesheet" href="css/themes4/theme_pink.min.css" />
 	<link rel="stylesheet" href="css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<script type="application/javascript" src="../js/iscroll.js"></script>
 	
-<script language="JavaScript">
-<!--
+	<!-- Puci Zoom -->
+	<script type="text/javascript">
 
-var numQues = 5;
-var numChoi = 3;
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper', { zoom:true });
+		}
 
-var answers = new Array(5);
-answers[0] = "Patung Asmat";
-answers[1] = "Jawa Barat";
-answers[2] = "Kayu"
-answers[3] = "Papua";
-answers[4] = "Cepot";
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
-function getScore(form) {
-  var score = 0;
-  var currElt;
-  var currSelection;
+		document.addEventListener('DOMContentLoaded', loaded, false);
 
-  for (i=0; i<numQues; i++) {
-    currElt = i*numChoi;
-    for (j=0; j<numChoi; j++) {
-      currSelection = form.elements[currElt + j];
-      if (currSelection.checked) {
-        if (currSelection.value == answers[i]) {
-          score++;
-          break;
-        }
-      }
-    }
-  }
+	</script>
+	<!-- End Puci -->
+	
+	<script language="JavaScript">
+	<!--
 
-  score = Math.round(score/numQues*100);
-  form.percentage.value = score + "%";
+	var numQues = 5;
+	var numChoi = 3;
 
-  var correctAnswers = "";
-  for (i=1; i<=numQues; i++) {
-    correctAnswers += i + ". " + answers[i-1] + "\r\n";
-  }
-  form.solutions.value = correctAnswers;
+	var answers = new Array(5);
+	answers[0] = "Patung Asmat";
+	answers[1] = "Jawa Barat";
+	answers[2] = "Kayu"
+	answers[3] = "Papua";
+	answers[4] = "Cepot";
 
-}
+	function getScore(form) {
+	  var score = 0;
+	  var currElt;
+	  var currSelection;
+
+	  for (i=0; i<numQues; i++) {
+		currElt = i*numChoi;
+		for (j=0; j<numChoi; j++) {
+		  currSelection = form.elements[currElt + j];
+		  if (currSelection.checked) {
+			if (currSelection.value == answers[i]) {
+			  score++;
+			  break;
+			}
+		  }
+		}
+	  }
+
+	  score = Math.round(score/numQues*100);
+	  form.percentage.value = score + "%";
+
+	  var correctAnswers = "";
+	  for (i=1; i<=numQues; i++) {
+		correctAnswers += i + ". " + answers[i-1] + "\r\n";
+	  }
+	  form.solutions.value = correctAnswers;
+
+	}
 
 // -->
 </script>
 	
 </head>
 	<body>
-	
+	<div id="wrapper">
 	
 	<div id="pemahaman5" data-role="page" data-position="fixed" data-theme="a">
 			
@@ -147,6 +163,6 @@ function getScore(form) {
 	<div data-role="footer" data-position="fixed">
         	<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
         </div>
-	
+	</div>
 	</body>
 </html>

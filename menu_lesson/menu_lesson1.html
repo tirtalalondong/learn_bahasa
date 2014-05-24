@@ -15,57 +15,25 @@
 	<link rel="stylesheet" href="../css/themes4/theme_pink.min.css" />
 	<link rel="stylesheet" href="../css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
-<!--	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="application/javascript" src="../js/iscroll.js"></script>
 	
-	<script language="JavaScript">
-	
-	
-<!--
+	<!-- Puci Zoom -->
+	<script type="text/javascript">
 
-var numQues = 5;
-var numChoi = 2;
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper', { zoom:true });
+		}
 
-var answers = new Array(5);
-answers[0] = "B";
-answers[1] = "S";
-answers[2] = "S";
-answers[3] = "B";
-answers[4] = "S";
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
-function getScore(form) {
-  var score = 0;
-  var currElt;
-  var currSelection;
+		document.addEventListener('DOMContentLoaded', loaded, false);
 
-  for (i=0; i<numQues; i++) {
-    currElt = i*numChoi;
-    for (j=0; j<numChoi; j++) {
-      currSelection = form.elements[currElt + j];
-      if (currSelection.checked) {
-        if (currSelection.value == answers[i]) {
-          score++;
-          break;
-        }
-      }
-    }
-  }
-
-  score = Math.round(score/numQues*100);
-  form.percentage.value = score + "%";
-
-  var correctAnswers = "";
-  for (i=1; i<=numQues; i++) {
-    correctAnswers += i + ". " + answers[i-1] + "\r\n";
-  }
-  form.solutions.value = correctAnswers;
-
-}
-
-// -->
-</script>
+	</script>
+	<!-- End Puci -->
 </head>
 	<body>
-	
+	<div id="wrapper">
 	<div id="homeLesson" data-role="page" data-position="fixed" data-theme="a">
 			
 		<div data-role="header">
@@ -97,7 +65,7 @@ function getScore(form) {
 				
 		</div>
 		
-		<div data-role="content" data-theme="a">
+		<div data-role="content" >
 		<div data-role="collapsible-set" data-theme="a" data-content-theme="a" >
 	
 		<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
@@ -259,15 +227,15 @@ function getScore(form) {
 	<!-- popup-->
 	
 	
-		
+		<div data-role="footer" data-position="fixed">
+        	<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
+        </div>
+	
 		
 		</div>
 	
 			
-		<div data-role="footer" data-position="fixed">
-        	<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
-        </div>
-	</div>
+		
 	<!-- Batas menu dialog lesson 1-->
 	
 	<div id="menu_greeting" data-role="page" data-position="fixed" data-theme="a">
@@ -419,10 +387,12 @@ function getScore(form) {
 		</div>
 		
 		<div data-role="content" >
+		
 			<h2> B. Kosakata dan Ungkapan</h2>
-				<p><b>Hari dan Bulan</b></p>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="a" >
+		<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
 				
-			<p><b>Nama Hari</b></p>
+			<h3>Nama Hari</h3>
 				
 			<table data-role="table" class="ui-responsive">
 				  <thead>
@@ -462,8 +432,9 @@ function getScore(form) {
 						 </tr>
 					<tbody>
 				</table><br>
-				
-				<p><b>Nama Bulan</b></p>
+				</div>
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
+				<h3>Nama Bulan</h3>
 				
 			<table data-role="table" class="ui-responsive">
 				  <thead>
@@ -523,6 +494,8 @@ function getScore(form) {
 						 </tr>
 					<tbody>
 				</table><br>
+				</div>
+			</div>
 			</div>
 		</div>
 	
@@ -534,7 +507,7 @@ function getScore(form) {
 		<h1>Learn Bahasa</h1>
 		</div>
 		<div data-role="content">
-			<h2>Page Lesson Number</h2>
+			<h2>Angka</h2>
 				<p align="justify">Learning the Indonesian Numbers is very important because its structure is used in every day conversation.
 				The more you master it the more you get closer to mastering the Indonesian language. But first we need to know what the role of Numbers is in the structure of the grammar in Indonesian.
 				Indonesian cardinal number convey the "how many" they're also known as "counting numbers," because they show quantity.</p>
@@ -733,12 +706,10 @@ function getScore(form) {
 			<a href="../index.html"  rel="external" data-rel="home" class="ui-btn ui-btn-right ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-home">Home</a>
 		</div>
 		<div data-role="content">
-		
-		
-		<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
-			<h2>C.Grammar</h2>
-		<div data-role="content" data-theme="a">
+		<h2>C.Grammar</h2>
 		<div data-role="collapsible-set" data-theme="a" data-content-theme="a" >
+		<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
+		
 	
 				<h2>1. <i>ini</i> dan <i>itu</i></h2>
 				<p align="justify"> <i>Ini </i> used to refer something which is close to the speaker. While <i>itu</i> is used to refer
@@ -764,7 +735,7 @@ function getScore(form) {
 					</table>	
 				</div>
 				
-				<div data-role="collapsible-set" data-theme="a" data-content-theme="a" >
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
 	
 				
 				<h2>2. Kata tanya <i> Apa </h2>
@@ -861,7 +832,7 @@ function getScore(form) {
 				</table><br>
 				</div>
 	
-				<div data-role="collapsible-set" data-theme="a" data-content-theme="a" >
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
 	
 				<h2>3. Pernyataan</h2>				
 				<p align="justify"> <i> Pernyaataan </i> or statement is used to inform something to the reader or to the listener.</br></p>
@@ -892,6 +863,6 @@ function getScore(form) {
 			<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
 		</div>
 	</div>
-	 
+	</div>
 	</body>
 </html>

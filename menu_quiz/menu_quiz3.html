@@ -16,6 +16,22 @@
 	<link rel="stylesheet" href="../css/themes4/theme_pink.min.css" />
 	<link rel="stylesheet" href="../css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<script type="application/javascript" src="../js/iscroll.js"></script>
+	
+	<!-- Puci Zoom -->
+	<script type="text/javascript">
+
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper', { zoom:true });
+		}
+
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+		document.addEventListener('DOMContentLoaded', loaded, false);
+
+	</script>
+	<!-- End Puci -->
 	
 	<script language="JavaScript">
 <!--
@@ -59,8 +75,7 @@ function getScore(form) {
 	
 </head>
 	<body>
-	
-	
+	<div id="wrapper">	
 	<div id="kuis3" data-role="page" data-position="fixed" data-theme="a">
 			
 		<div data-role="header">
@@ -205,9 +220,9 @@ function getScore(form) {
 					</form>
 	</div>  
 
-	<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed">
         	<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
         </div>
-	
+	</div>
 	</body>
 </html>

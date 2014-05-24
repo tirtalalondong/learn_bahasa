@@ -12,9 +12,25 @@
 	<link rel="stylesheet" href="../css/themes4/theme_pink.min.css" />
 	<link rel="stylesheet" href="../css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<script type="application/javascript" src="../js/iscroll.js"></script>
+	
+		<!-- Puci Zoom -->
+	<script type="text/javascript">
+
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper', { zoom:true });
+		}
+
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+		document.addEventListener('DOMContentLoaded', loaded, false);
+
+	</script>
+	<!-- End Puci -->
 </head>
 	<body>
-	
+	<div id="wrapper">
 	<div id="menu-lesson2" data-role="page" data-position="fixed" data-theme="a">
 			
 		<div data-role="header">
@@ -333,11 +349,14 @@
 	<p><a href="../menu_quiz/p_less8_1.html" rel="external" data-role="button" >Latihan Pemahaman </a></p>
 	</div>
 
-	<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed">
         	<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
      
 		</div>
 	</div>
+</div>
+</div>
+</div>
 	<!-- batas menu dialog lesson 8 -->
 	
 	<div id="menu_kosakata8" data-role="page" data-position="fixed" data-theme="a">
@@ -349,7 +368,9 @@
 		</div>
 		<div data-role="content">
 			<h2>Kosakata dan Ungkapan</h2>
-				<p><b>1. Istilah Geografi</b></p>
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="a" >
+			<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
+				<h3>1. Istilah Geografi</h3>
 				
 				<table  cellpadding="5">
 						<tr>
@@ -404,8 +425,10 @@
 						</tr>
 						
 					</table> </br>
+				</div>
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
 				
-				<p><b>2. Flora dan Fauna</b></p>
+				<h3>2. Flora dan Fauna</h3>
 				<p>a) Flora</p>
 				
 				<center>	
@@ -465,13 +488,16 @@
 				
 				</table>
 				</center>
-
+				</div>
+				
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
 					
-				<p><b>3. Arah Mata Angin</b></p>
+				<h3>3. Arah Mata Angin</h3>
 				
 				<p align="center"><img src="../img/lesson/kompas.jpg" class="imgposisi" alt="Tugu Pahlawan" width="355" height="300"></p>
-							
-				<p><b>4. Keadaan Cuaca dan Musim </b></p>
+				</div>	
+				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right">
+				<h3>4. Keadaan Cuaca dan Musim </h3>
 					
 					<table  cellpadding="5">
 						<tr>
@@ -513,7 +539,8 @@
 						</tr>
 						
 					</table> </br>
-					
+					</div>
+				</div>
 					
 		</div>
 		<div data-role="footer" data-position="fixed">
@@ -611,8 +638,6 @@
 			<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
 		</div>
 	</div>
-	
-	
-	 
+	</div>
 	</body>
 </html>

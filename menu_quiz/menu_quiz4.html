@@ -16,6 +16,22 @@
 	<link rel="stylesheet" href="../css/themes4/theme_pink.min.css" />
 	<link rel="stylesheet" href="../css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<script type="application/javascript" src="../js/iscroll.js"></script>
+	
+	<!-- Puci Zoom -->
+	<script type="text/javascript">
+
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper', { zoom:true });
+		}
+
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+		document.addEventListener('DOMContentLoaded', loaded, false);
+
+	</script>
+	<!-- End Puci -->
 	
 <script language="JavaScript">
 <!--
@@ -56,7 +72,7 @@ function getScore(form) {
 </head>
 	<body>
 	
-	
+	<div id="wrapper">
 	<div id="kuis4" data-role="page" data-position="fixed" data-theme="a">
 			
 		<div data-role="header">
@@ -144,7 +160,7 @@ function getScore(form) {
 		</script>
 		
 		<h2>Quiz </h2>
-			<p align ="justify">Complete these following question using the question words <i>kami </i>, <i>kita</i>,<i>mereka</i> , or <i>kami</i></i>.</p>
+			<p align ="justify">Complete these following question using the question words <i>kami </i>, <i>kita</i>, <i>mereka</i> , or <i>kami</i></i>.</p>
 			<p style="color:red"> Notes : please, use the uppercase for the first letter on answer. </p>
 			<p> Example : </br>
 			Question :..... Billy menginap?</br>
@@ -184,6 +200,6 @@ function getScore(form) {
 	<div data-role="footer" data-position="fixed">
         	<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
         </div>
-	
+	</div>
 	</body>
 </html>

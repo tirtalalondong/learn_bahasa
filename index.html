@@ -17,6 +17,7 @@
 	<script type="application/javascript" src="js/iscroll.js"></script>
 	
 <script type="text/javascript">
+	function exitPoxi(){
     $(document).on("pageinit", "#home", function (event) {
         $(document).on('click', '#exit', function (e) {
             if ( $('.ui-page-active').attr('id') == 'home') {
@@ -25,10 +26,11 @@
                 history.back();             
             }
         }, false);             
-
     });
+	}
 </script>
 
+<!-- Puci Zoom -->
 <script type="text/javascript">
 
 var myScroll;
@@ -41,27 +43,7 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 document.addEventListener('DOMContentLoaded', loaded, false);
 
 </script>
-
-<style type="text/css" media="all">
-#wrapper {
-	/*position:absolute; z-index:1;*/
-	/*top:45px; bottom:48px; left:0;
-	width:100%;*/
-	/*background:#aaa;*/
-	overflow:auto;
-}
-
-#scroller {
-	position:relative;
-/*	-webkit-touch-callout:none;*/
-	-webkit-tap-highlight-color:rgba(0,0,0,0);
-
-	width:640px;
-	padding:0;
-	background:#fff;
-}
-
-</style>
+<!-- End Puci -->
 
 </head>
 	<body background="img/background.jpg">
@@ -79,7 +61,7 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 						<li><a href="menu_informasi.html" rel="external">Information</a></li>
 						<li><a href="menu_glosarium.html" rel="external">Glosarium</a></li>
 						<li><a href="#help">Help</a></li>
-						<li><a href="#exit">Exit</a></li>
+						<li><a href="#" onClick="exitPoxi();">Exit</a></li>
 					</ul>
 				</div>
 				
