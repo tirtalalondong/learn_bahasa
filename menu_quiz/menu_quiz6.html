@@ -16,9 +16,9 @@
 	<link rel="stylesheet" href="../css/themes4/theme_pink.min.css" />
 	<link rel="stylesheet" href="../css/themes4/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
-	<script type="application/javascript" src="../js/iscroll.js"></script>
+	<script type="application/javascript" src="../js/zoom/iscroll.js"></script>
 	
-	<!-- Puci Zoom -->
+	<!-- Zoom -->
 	<script type="text/javascript">
 
 		var myScroll;
@@ -31,7 +31,7 @@
 		document.addEventListener('DOMContentLoaded', loaded, false);
 
 	</script>
-	<!-- End Puci -->
+	<!-- End -->
 	
 <script language="JavaScript">
 <!--
@@ -72,7 +72,7 @@ function getScore(form) {
 	
 	
 	<div id="kuis6" data-role="page" data-position="fixed" data-theme="a">
-	<div id="wrapper">	
+
 		<div data-role="header">
 			<a rel="external" data-rel="Back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-back" onClick="myBack();">Back</a>
 			
@@ -165,40 +165,37 @@ function getScore(form) {
 			Tanya :Apa nama rumah adat dari Jawa</br>
 			Jawab : <b>Joglo </b></br>
 			
-	</div>	
-					<form name="quiz">
-							1. Apa nama rumah adat dari Sulawesi Selatan?<br>
-							<input type="text" name="q1" size=15 value="">
-							<p>
+				<form name="quiz">
+						1. Apa nama rumah adat dari Sulawesi Selatan?<br>
+						<input type="text" name="q1" size=15 value="">
+						<p>
 
-							2. Apa alat musik tradisional dari Jawa Barat?<br>
-							<input type="text" name="q2" size=15 value="">
-							<p>
+						2. Apa alat musik tradisional dari Jawa Barat?<br>
+						<input type="text" name="q2" size=15 value="">
+						<p>
 
-							3. Berasal dari mana tari Tor-tor?<br>
-							<input type="text" name="q3" size=15 value="">
-							<p>
+						3. Berasal dari mana tari Tor-tor?<br>
+						<input type="text" name="q3" size=15 value="">
+						<p>
 
-							4. Maria beragama kristen, dia beribadah di ....<br>
-							<input type="text" name="q4" size=15 value="">
-							<p>
+						4. Maria beragama kristen, dia beribadah di ....<br>
+						<input type="text" name="q4" size=15 value="">
+						<p>
 
-							5. Apa nama suku dari Kalimantan ?<br>
-							<input type="text" name="q5" size=15 value="">
-							<p>
+						5. Apa nama suku dari Kalimantan ?<br>
+						<input type="text" name="q5" size=15 value="">
+						<p>
 
-							<input type="button" value="Get score" onClick="getScore(this.form)">
-							<input type="reset" value="Clear"><p>
-							Score = <input type=text size=15 name="percentage"><br>
-							<!--Correct answers:<br>
-							<textarea name="solutions" wrap="virtual" rows="4" cols="40"></textarea> -->
-							</form>
-			</div>  
-		<div id="wrapper">	
+						<input type="button" value="Get score" onClick="getScore(this.form)">
+						<input type="reset" value="Clear"><p>
+						Score = <input type=text size=15 name="percentage"><br>
+						<!--Correct answers:<br>
+						<textarea name="solutions" wrap="virtual" rows="4" cols="40"></textarea> -->
+				</form>
+	
 			<div data-role="footer" data-position="fixed">
 				<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
 			</div>
-	
-		</div>
+	</div>  
 	</body>
 </html>
