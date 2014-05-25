@@ -36,6 +36,7 @@
 	</feature>
 	<feature name="Device">
 	  <param name="android-package" value="org.apache.cordova.Device"/>
+	  <param name="ios-package" value="CDVDevice" />
 	</feature>
 	<feature name="Accelerometer">
 	  <param name="android-package" value="org.apache.cordova.AccelListener"/>
